@@ -1,8 +1,10 @@
+
 class Band:
-    def __init__(self, name, members=None):
+    def __init__(self, name, members=None, instances=[]):
         self.name = name
         self.members = members
-
+        self.instances = instances
+        Band.instances.append(self)
     def __str__(self):
         return f"The band {self.name}"
 
@@ -13,6 +15,11 @@ class Band:
         for member in self.members:
             solos.append(member.play_solo())
         return solos
+
+    @classmethod
+    def to_list(cls):
+        return cls.instances
+        
 
 
 class Musician():
