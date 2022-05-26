@@ -25,6 +25,8 @@ class Guitarist:
 
     def get_instrument(cls):
         return f"guitar"
+    def play_solo(cls):
+        return f"face melting guitar solo"
 
 class Bassist:
     def __init__(self, name):
@@ -35,6 +37,8 @@ class Bassist:
         return f"Bassist instance. Name = {self.name}"
     def get_instrument(cls):
         return f"bass"
+    def play_solo(cls):
+        return f"bom bom buh bom"
 
 class Drummer:
     def __init__(self, name):
@@ -43,3 +47,8 @@ class Drummer:
         return f"My name is {self.name} and I play drums"
     def __repr__(self):
         return f"Drummer instance. Name = {self.name}"
+    def get_instrument(cls):
+        return f"drums"
+    def play_solo(cls):
+        return f"rattle boom crash"
+    
