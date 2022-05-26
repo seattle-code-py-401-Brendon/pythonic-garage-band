@@ -8,12 +8,17 @@ class Band:
 
     def __repr__(self):
         return f"Band instance. name={self.name}, members={self.members}"
+    def play_solos(self):
+        solos = []
+        for member in self.members:
+            solos.append(member.play_solo())
+        return solos
 
 
-class Musician:
+class Musician():
     pass
 
-class Guitarist:
+class Guitarist(Musician, Band):
     def __init__(self, name):
         self.name = name
 
@@ -28,7 +33,7 @@ class Guitarist:
     def play_solo(cls):
         return f"face melting guitar solo"
 
-class Bassist:
+class Bassist(Musician,Band):
     def __init__(self, name):
         self.name = name
     def __str__(self):
@@ -40,7 +45,7 @@ class Bassist:
     def play_solo(cls):
         return f"bom bom buh bom"
 
-class Drummer:
+class Drummer(Musician,Band):
     def __init__(self, name):
         self.name = name
     def __str__(self):
