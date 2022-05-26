@@ -21,6 +21,6 @@ DATABASE_URL - URL to the running Postgres instance/db
 
 ## Tests
 How do you run tests?
--   pytest on top level of repository
+-   run pytest in terminal inside the tests folder
 Any tests of note?
 Describe any tests that you did not complete, skipped, etc
